@@ -1,7 +1,6 @@
 /**
  * An implementation of a LIFO structure called Stack
  * @param T data stored in the stack
- * @property top references the top element in the stack
  */
 interface Stack<T> {
     fun isEmpty(): Boolean
@@ -15,15 +14,24 @@ class MyStack<T>: Stack<T> {
     override fun isEmpty(): Boolean {
         return list.isEmpty()
     }
-
+    /**
+     * Push [data] onto the Stack
+     * @param data The new value to put onto the stack
+     */
     override fun push(data: T) {
         list.pushFront(data)
     }
 
+     /**
+     * Pop the top element off the stack
+     * @return the top element if it's not empty, else return null
+     */
     override fun pop(): T? {
         return list.popFront()
     }
-
+    /**
+     * @return the top element if it's not empty, else return null
+     */
     override fun peek(): T? {
         return list.peekFront()
     }

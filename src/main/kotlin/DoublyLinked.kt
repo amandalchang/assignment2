@@ -69,12 +69,10 @@ class MyDoublyLinked<T>: DoublyLinked<T> {
     private fun shrink() {
         if (size > 1) {
             size--;
-            println(size)
         } else {
             size = 0;
             head = null;
             tail = null
-            println("I set size to 0")
         }
     }
     /**
